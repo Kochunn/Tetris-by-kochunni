@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tetris</title>
+    <link rel="icon" href="resources/logo/kp.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button id="pause">❚❚</button>
+            <button id="resume" style="display:none;">▶</button>
+            <button id="restart">⟳</button>
+        </div>
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div class="sidebar">
+            <div>
+                <h2>SCORE</h2>
+                <p id="score">0</p>
+            </div>
+            <div>
+                <h2>HIGH SCORE</h2>
+                <p id="highScore">0</p>
+            </div>
+            <div>
+                <h2>LINES</h2>
+                <p id="lines">0</p>
+            </div>
+            <div>
+                <h2>LEVEL</h2>
+                <p id="level">1</p>
+            </div>
+            <div>
+                <h2>NEXT</h2>
+                <canvas id="next" width="120" height="120"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-controls">
+        <div class="controls-wrapper">
+            <button id="rotate-btn" class="control-btn"></button>
+            <button id="left-btn" class="control-btn"></button>
+            <button id="down-btn" class="control-btn"></button>
+            <button id="right-btn" class="control-btn"></button>
+            <button id="drop-down-btn" class="control-btn"></button>
+        </div>
+    </div>
+
+    <div id="restart-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>Are you sure? Your current score and progress will be lost.</p>
+            <div class="modal-buttons">
+                <button id="restart-yes">Yes</button>
+                <button id="restart-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p id="game-over-text">☠️Game Over☠️</p>
+            <div class="modal-buttons">
+                <button id="try-again-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="watermark">Tetris | by Kochunni</div>
+    <script src="script.js"></script>
+</body>
+</html>
