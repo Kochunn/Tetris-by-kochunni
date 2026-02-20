@@ -170,10 +170,9 @@ button#restart:hover {
 }
 
 @media (max-width: 768px) {
-   html, body {
-        padding: 15px;
-        padding-bottom: 110px; /* Make space for controls */
-        overflow: hidden;
+    html, body {
+        overflow-y: hidden; /* Prevent vertical scroll */
+        height: 100%;
     }
 
     .container {
